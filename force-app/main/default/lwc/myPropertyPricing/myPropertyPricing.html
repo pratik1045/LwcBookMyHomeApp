@@ -1,0 +1,35 @@
+<template>
+    <template if:true={propertyFound}>
+        <lightning-layout multiple-rows style="background-color: azure">
+            <div style="margin-top: 2%">
+                <lightning-formatted-rich-text style="font-weight: bold;color: brown;"
+                value={property.Property_Description__c}></lightning-formatted-rich-text>
+            </div>
+            <div class="slds-box slds-grid slds-wrap slds-p-around-small" style="margin-top: 2%;width:100%">
+                <div class="slds-col">
+                    <lightning-layout multiple-rows>
+                        <lightning-layout-item padding="around-small">
+                            <div class="header-column">
+                                <p class="field-title" title="Rental Value">Rental Value</p>
+                                <p>{property.Rent__c}</p>
+                            </div>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="around-small">
+                            <div class="header-column">
+                                <p class="field-title" title="Security Depoist">Security Depoist</p>
+                                <p>{property.Security_Deposit__c}</p>
+                            </div>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="around-small">
+                            <div class="header-column">
+                                <p class="field-title" title="Maintaince Charge">Maintaince Charge</p>
+                                <p>{property.Maintainance_Charge__c}</p>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+ 
+            </div>
+        </lightning-layout>
+    </template>   
+</template>
